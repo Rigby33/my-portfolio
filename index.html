@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Catherine Lynn | Web Developer and Designer</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+	<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+	<div id="app">
+		<header :class="{home : ['/'].indexOf($route.path) > -1}">
+			<nav>
+				<ul>
+					<li><router-link to="/mywork" id="myworklink">my work</router-link></li>
+					<li><router-link to="/about" id="aboutlink">about</router-link></li>
+					<li><router-link to="/contact" id="contactlink">contact</router-link></li>
+				</ul>
+			</nav>
+			<div :class="{headerlogocontainer: ['/mywork', '/mywork/smoothiesocial', '/mywork/hikinganadventure', '/mywork/petplusvet', '/mywork/backcountryquiz', '/mywork/barsteel', '/mywork/daleville', '/about', '/contact'].indexOf($route.path) > -1}">
+				<router-link to="/">
+					<img class="headerlogo" src="./images/white-logo.svg"/>
+				</router-link>
+			</div>
+			<div class="socialmedia">
+				<div id="socialicons">
+					<a v-for="icon in icons" target="_blank" v-bind:href="icon.link">
+						<i v-bind:class="icon.icon"></i>
+					</a>
+				</div>
+			</div>
+		</header>
+		<transition name="fade" mode="out-in">
+			<router-view></router-view>
+		</transition>
+		<div id="home" :class="{internalPage : ['/mywork', '/mywork/smoothiesocial', '/mywork/hikinganadventure', '/mywork/petplusvet', '/mywork/backcountryquiz', '/mywork/barsteel', '/mywork/daleville', '/about', '/contact'].indexOf($route.path) > -1}">
+			<div class="homewrapper">
+				<div class="herosection">
+					<div class="herocontainer">
+						<img src="./images/logo.svg" class="herologo"/>
+						<h1><span>web designer</span> + <span>developer</span> fueled by <span>challenge, problem solving</span> + <span>collaboration</span></h1>
+					</div>
+				</div>
+			</div>
+			<div class="downarrow">
+				<img src="./images/downarrow.svg" class="downarrowimage"/>
+			</div>
+		</div>
+		<div id="recentwork" class="row" :class="{internalPage : ['/mywork', '/mywork/smoothiesocial', '/mywork/hikinganadventure', '/mywork/petplusvet', '/mywork/backcountryquiz', '/mywork/barsteel', '/mywork/daleville', '/about', '/contact'].indexOf($route.path) > -1}">
+			<div class="recentworkwrapper">
+				<div>
+					<div>
+						<h2>recent work</h2>
+						<p>check out what i've built lately below. interested in seeing other examples? click view more to see more.</p>
+					</div>
+					<router-link class="viewmore" to="/mywork">view more</router-link>
+				</div>
+				<router-link class="recentworkimages projecthover" v-for="recentWork in recentWorks" :key="recentWork.id" :style="{ backgroundImage: 'url(' + recentWork.image + ')' }" :to="recentWork.path">
+					<div class="projectinfo">
+						<div class="projectname">{{recentWork.name}}</div>
+						<div class="projectsub">{{recentWork.subtitle}}</div>
+					</div>
+				</router-link>
+			</div>
+		</div>
+		<div id="skills" class="row" :class="{internalPage : ['/mywork', '/mywork/smoothiesocial', '/mywork/hikinganadventure', '/mywork/petplusvet', '/mywork/backcountryquiz', '/mywork/barsteel', '/mywork/daleville', '/about', '/contact'].indexOf($route.path) > -1}">
+			<div class="skillswrapper">
+				<div>
+					<h2>catherine lynn is a</h2>
+				</div>
+				<div class="skillwrapper">
+					<div class="skill" v-for="skill in skills" :key="skill.id">
+						<img :src="skill.icon" :alt="skill.name"/>
+						<h3>{{skill.name}}</h3>
+						<p>{{skill.deets}}</p>
+					</div>
+				</div>
+				<router-link class="viewmore" to="/about">learn more</router-link>
+			</div>
+		</div>
+		<footer>
+		</footer>
+	</div>
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
