@@ -1,37 +1,37 @@
 const thumbnails = [
 	{
 		name: 'SmoothieSocial',
-		path: '/mywork/smoothiesocial',
+		path: '/my-portfolio/mywork/smoothiesocial',
 		image: './images/smoothiesocial-home.jpg',
 		subtitle: 'Node.js + JavaScript + JQuery + HTML + CSS'
 	},
 	{
 		name: 'Hiking an Adventure',
-		path: '/mywork/hikinganadventure',
+		path: '/my-portfolio/mywork/hikinganadventure',
 		image: './images/hikingadventure-home.jpg',
 		subtitle: 'React + JavaScript + Node.js + HTML + CSS'
 	},
 	{
 		name: 'Pet + Vet',
-		path: '/mywork/petplusvet',
+		path: '/my-portfolio/mywork/petplusvet',
 		image: './images/petvet-home.jpg',
 		subtitle: 'JavaScript + JQuery + HTML + CSS'
 	},
 	{
 		name: 'Backcountry Quiz',
-		path: '/mywork/backcountryquiz',
+		path: '/my-portfolio/mywork/backcountryquiz',
 		image: './images/backcountryquiz-home.jpg',
 		subtitle: 'JavaScript + JQuery + HTML + CSS'
 	},
 	{
 		name: 'Barsteel',
-		path: '/mywork/barsteel',
+		path: '/my-portfolio/mywork/barsteel',
 		image: './images/barsteel-home.jpg',
 		subtitle: 'Webflow'
 	},
 	{
 		name: 'Daleville Community Library',
-		path: '/mywork/daleville',
+		path: '/my-portfolio/mywork/daleville',
 		image: './images/daleville-home.jpg',
 		subtitle: 'Wordpress'
 	}

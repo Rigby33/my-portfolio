@@ -362,7 +362,7 @@ const contact = {
 
 const routes = [
 	{
-		path: '/mywork',
+		path: '/my-portfolio/mywork',
 		component: projects
 	},
 	{
@@ -390,11 +390,11 @@ const routes = [
 		component: dalevilleLibrary
 	},
 	{
-		path: '/about',
+		path: '/my-portfolio/about',
 		component: aboutMe
 	},
 	{
-		path: '/contact',
+		path: '/my-portfolio/contact',
 		component: contact
 	}
 ];

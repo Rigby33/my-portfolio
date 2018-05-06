@@ -10,15 +10,15 @@
 </head>
 <body>
 	<div id="app">
-		<header :class="{home : ['/'].indexOf($route.path) > -1}">
+		<header :class="{home : ['/my-portfolio'].indexOf($route.path) > -1}">
 			<nav>
 				<ul>
-					<li><router-link to="/mywork" id="myworklink">my work</router-link></li>
-					<li><router-link to="/about" id="aboutlink">about</router-link></li>
-					<li><router-link to="/contact" id="contactlink">contact</router-link></li>
+					<li><router-link to="/my-portfolio/mywork" id="myworklink">my work</router-link></li>
+					<li><router-link to="/my-portfolio/about" id="aboutlink">about</router-link></li>
+					<li><router-link to="/my-portfolio/contact" id="contactlink">contact</router-link></li>
 				</ul>
 			</nav>
-			<div :class="{headerlogocontainer: ['/mywork', '/mywork/smoothiesocial', '/mywork/hikinganadventure', '/mywork/petplusvet', '/mywork/backcountryquiz', '/mywork/barsteel', '/mywork/daleville', '/about', '/contact'].indexOf($route.path) > -1}">
+			<div :class="{headerlogocontainer: ['/my-portfolio/mywork', '/my-portfolio/mywork/smoothiesocial', '/my-portfolio/mywork/hikinganadventure', '/my-portfolio/mywork/petplusvet', '/my-portfolio/mywork/backcountryquiz', '/my-portfolio/mywork/barsteel', '/my-portfolio/mywork/daleville', '/my-portfolio/about', '/my-portfolio/contact'].indexOf($route.path) > -1}">
 				<router-link to="/">
 					<img class="headerlogo" src="./images/white-logo.svg"/>
 				</router-link>
@@ -34,7 +34,7 @@
 		<transition name="fade" mode="out-in">
 			<router-view></router-view>
 		</transition>
-		<div id="home" :class="{internalPage : ['/mywork', '/mywork/smoothiesocial', '/mywork/hikinganadventure', '/mywork/petplusvet', '/mywork/backcountryquiz', '/mywork/barsteel', '/mywork/daleville', '/about', '/contact'].indexOf($route.path) > -1}">
+		<div id="home" :class="{internalPage : ['/my-portfolio/mywork', '/my-portfolio/mywork/smoothiesocial', '/my-portfolio/mywork/hikinganadventure', '/my-portfolio/mywork/petplusvet', '/my-portfolio/mywork/backcountryquiz', '/my-portfolio/mywork/barsteel', '/my-portfolio/mywork/daleville', '/my-portfolio/about', '/my-portfolio/contact'].indexOf($route.path) > -1}">
 			<div class="homewrapper">
 				<div class="herosection">
 					<div class="herocontainer">
@@ -47,14 +47,14 @@
 				<img src="./images/downarrow.svg" class="downarrowimage"/>
 			</div>
 		</div>
-		<div id="recentwork" class="row" :class="{internalPage : ['/mywork', '/mywork/smoothiesocial', '/mywork/hikinganadventure', '/mywork/petplusvet', '/mywork/backcountryquiz', '/mywork/barsteel', '/mywork/daleville', '/about', '/contact'].indexOf($route.path) > -1}">
+		<div id="recentwork" class="row" :class="{internalPage : ['/my-portfolio/mywork', '/my-portfolio/mywork/smoothiesocial', '/my-portfolio/mywork/hikinganadventure', '/my-portfolio/mywork/petplusvet', '/my-portfolio/mywork/backcountryquiz', '/my-portfolio/mywork/barsteel', '/my-portfolio/mywork/daleville', '/my-portfolio/about', '/my-portfolio/contact'].indexOf($route.path) > -1}">
 			<div class="recentworkwrapper">
 				<div>
 					<div>
 						<h2>recent work</h2>
 						<p>check out what i've built lately below. interested in seeing other examples? click view more to see more.</p>
 					</div>
-					<router-link class="viewmore" to="/mywork">view more</router-link>
+					<router-link class="viewmore" to="/my-portfolio/mywork">view more</router-link>
 				</div>
 				<router-link class="recentworkimages projecthover" v-for="recentWork in recentWorks" :key="recentWork.id" :style="{ backgroundImage: 'url(' + recentWork.image + ')' }" :to="recentWork.path">
 					<div class="projectinfo">
@@ -64,7 +64,7 @@
 				</router-link>
 			</div>
 		</div>
-		<div id="skills" class="row" :class="{internalPage : ['/mywork', '/mywork/smoothiesocial', '/mywork/hikinganadventure', '/mywork/petplusvet', '/mywork/backcountryquiz', '/mywork/barsteel', '/mywork/daleville', '/about', '/contact'].indexOf($route.path) > -1}">
+		<div id="skills" class="row" :class="{internalPage : ['/my-portfolio/mywork', '/my-portfolio/mywork/smoothiesocial', '/my-portfolio/mywork/hikinganadventure', '/my-portfolio/mywork/petplusvet', '/my-portfolio/mywork/backcountryquiz', '/my-portfolio/mywork/barsteel', '/my-portfolio/mywork/daleville', '/my-portfolio/about', '/my-portfolio/contact'].indexOf($route.path) > -1}">
 			<div class="skillswrapper">
 				<div>
 					<h2>catherine lynn is a</h2>
@@ -76,7 +76,7 @@
 						<p>{{skill.deets}}</p>
 					</div>
 				</div>
-				<router-link class="viewmore" to="/about">learn more</router-link>
+					<router-link class="viewmore" to="/my-portfolio/about">learn more</router-link>
 			</div>
 		</div>
 		<footer>
