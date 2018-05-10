@@ -54,10 +54,32 @@ let projects = {template: `<div class="row" id="mywork">
 const smoothiesocial = {
 	template: `<div class="projectdetails" style="${projectDeets[0].backgroundColor}">
         <div class="imageAndDeets">
+        <div class="backtowork">
+          <router-link to="/mywork">
+            <img src="./images/close.svg"/>
+          </router-link>
+        </div>
+        <div class="firstimagewrapper">
+        <div class="back">
+          <router-link to="${thumbnails[5].path}">
+            <i class="fas fa-arrow-left"></i>
+          </router-link>
+        </div>
+        <div class="firstlinksandimagewrapper">
           <h2>${projectDeets[0].name}</h2>
+          <div class="livelinks">
             <a href="${projectDeets[0].link}" target="_blank">Live Link</a>
+            <a href="${projectDeets[0].github}" target="_blank">github</a>
+          </div>
         <div class="firstprojectimage">
           <img src="${projectDeets[0].image}" style="${projectDeets[0].border}"/>
+        </div>
+        </div>
+        <div class="next">
+          <router-link to="${thumbnails[1].path}">
+            <i class="fas fa-arrow-right"></i>
+          </router-link>
+        </div>
         </div>
           <div class="introparagraphwrapper">
             <div class="introwrapperwrapper">
@@ -98,10 +120,32 @@ const smoothiesocial = {
 const hikingAnAdvenutre = {
 	template: `<div class="projectdetails" style="${projectDeets[1].backgroundColor}">
         <div class="imageAndDeets">
+        <div class="backtowork">
+          <router-link to="/mywork">
+            <img src="./images/close.svg"/>
+          </router-link>
+        </div>
+        <div class="firstimagewrapper">
+        <div class="back">
+          <router-link to="${thumbnails[0].path}">
+            <i class="fas fa-arrow-left"></i>
+          </router-link>
+        </div>
+        <div class="firstlinksandimagewrapper">
           <h2>${projectDeets[1].name}</h2>
+          <div class="livelinks">
             <a href="${projectDeets[1].link}" target="_blank">Live Link</a>
+            <a href="${projectDeets[1].github}" target="_blank">github</a>
+          </div>
         <div class="firstprojectimage">
           <img src="${projectDeets[1].image}" style="${projectDeets[1].border}"/>
+        </div>
+        </div>
+        <div class="next">
+          <router-link to="${thumbnails[2].path}">
+            <i class="fas fa-arrow-right"></i>
+          </router-link>
+        </div>
         </div>
           <div class="introparagraphwrapper">
             <div class="introwrapperwrapper">
@@ -117,10 +161,10 @@ const hikingAnAdvenutre = {
           </div>
           <div class="moreprojectimages">
             <div class="logoAndIcons">
-              <img src="${projectDeets[0].logosAndIcons[0].src}" alt="${projectDeets[0].logosAndIcons[0].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[1].src}" alt="${projectDeets[0].logosAndIcons[1].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[2].src}" alt="${projectDeets[0].logosAndIcons[2].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[3].src}" alt="${projectDeets[0].logosAndIcons[3].alt}"/>
+              <img src="${projectDeets[1].logosAndIcons[0].src}" alt="${projectDeets[1].logosAndIcons[0].alt}"/>
+              <img src="${projectDeets[1].logosAndIcons[1].src}" alt="${projectDeets[1].logosAndIcons[1].alt}"/>
+              <img src="${projectDeets[1].logosAndIcons[2].src}" alt="${projectDeets[1].logosAndIcons[2].alt}"/>
+              <img src="${projectDeets[1].logosAndIcons[3].src}" alt="${projectDeets[1].logosAndIcons[3].alt}"/>
             </div>
             <div class="moreimages">
               <img src="${projectDeets[1].moreimages[0]}"/>
@@ -142,16 +186,37 @@ const hikingAnAdvenutre = {
 const petPlusVet = {
 	template: `<div class="projectdetails" style="${projectDeets[2].backgroundColor}">
         <div class="imageAndDeets">
+        <div class="backtowork">
+          <router-link to="/mywork">
+            <img src="./images/close.svg"/>
+          </router-link>
+        </div>
+        <div class="firstimagewrapper">
+        <div class="back">
+          <router-link to="${thumbnails[1].path}">
+            <i class="fas fa-arrow-left"></i>
+          </router-link>
+        </div>
+        <div class="firstlinksandimagewrapper">
           <h2>${projectDeets[2].name}</h2>
+          <div class="livelinks">
             <a href="${projectDeets[2].link}" target="_blank">Live Link</a>
+            <a href="${projectDeets[2].github}" target="_blank">github</a>
+          </div>
         <div class="firstprojectimage">
           <img src="${projectDeets[2].image}" style="${projectDeets[2].border}"/>
+        </div>
+        </div>
+        <div class="next">
+          <router-link to="${thumbnails[3].path}">
+            <i class="fas fa-arrow-right"></i>
+          </router-link>
+        </div>
         </div>
           <div class="introparagraphwrapper">
             <div class="introwrapperwrapper">
             <div class="sidebar">
               ${projectDeets[2].frontEnd}
-              ${projectDeets[2].backEnd}
             </div>
             <div class="introparagraph">
               <h2>${projectDeets[2].heading}</h2>
@@ -161,10 +226,12 @@ const petPlusVet = {
           </div>
           <div class="moreprojectimages">
             <div class="logoAndIcons">
-              <img src="${projectDeets[0].logosAndIcons[0].src}" alt="${projectDeets[0].logosAndIcons[0].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[1].src}" alt="${projectDeets[0].logosAndIcons[1].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[2].src}" alt="${projectDeets[0].logosAndIcons[2].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[3].src}" alt="${projectDeets[0].logosAndIcons[3].alt}"/>
+              <img style="width: 20%" src="${projectDeets[2].logosAndIcons[0].src}" alt="${projectDeets[2].logosAndIcons[0].alt}"/>
+              <img style="width: 15%" src="${projectDeets[2].logosAndIcons[1].src}" alt="${projectDeets[2].logosAndIcons[1].alt}"/>
+              <img style="width: 15%" src="${projectDeets[2].logosAndIcons[2].src}" alt="${projectDeets[2].logosAndIcons[2].alt}"/>
+              <img style="width: 15%" src="${projectDeets[2].logosAndIcons[3].src}" alt="${projectDeets[2].logosAndIcons[3].alt}"/>
+              <img style="width: 15%" src="${projectDeets[2].logosAndIcons[4].src}" alt="${projectDeets[2].logosAndIcons[4].alt}"/>
+              <img style="width: 15%" src="${projectDeets[2].logosAndIcons[5].src}" alt="${projectDeets[2].logosAndIcons[5].alt}"/>
             </div>
             <div class="moreimages">
               <img src="${projectDeets[2].moreimages[0]}"/>
@@ -186,16 +253,36 @@ const petPlusVet = {
 const backcountryQuiz = {
 	template: `<div class="projectdetails" style="${projectDeets[3].backgroundColor}">
         <div class="imageAndDeets">
+        <div class="backtowork">
+          <router-link to="/mywork">
+            <img src="./images/close.svg"/>
+          </router-link>
+        </div>
+        <div class="firstimagewrapper">
+        <div class="back">
+          <router-link to="${thumbnails[2].path}">
+            <i class="fas fa-arrow-left"></i>
+          </router-link>
+        </div>
+        <div class="firstlinksandimagewrapper">
           <h2>${projectDeets[3].name}</h2>
+          <div class="livelinks">
             <a href="${projectDeets[3].link}" target="_blank">Live Link</a>
+          </div>
         <div class="firstprojectimage">
           <img src="${projectDeets[3].image}" style="${projectDeets[3].border}"/>
+        </div>
+        </div>
+        <div class="next">
+          <router-link to="${thumbnails[4].path}">
+            <i class="fas fa-arrow-right"></i>
+          </router-link>
+        </div>
         </div>
           <div class="introparagraphwrapper">
             <div class="introwrapperwrapper">
             <div class="sidebar">
               ${projectDeets[3].frontEnd}
-              ${projectDeets[3].backEnd}
             </div>
             <div class="introparagraph">
               <h2>${projectDeets[3].heading}</h2>
@@ -205,10 +292,10 @@ const backcountryQuiz = {
           </div>
           <div class="moreprojectimages">
             <div class="logoAndIcons">
-              <img src="${projectDeets[0].logosAndIcons[0].src}" alt="${projectDeets[0].logosAndIcons[0].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[1].src}" alt="${projectDeets[0].logosAndIcons[1].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[2].src}" alt="${projectDeets[0].logosAndIcons[2].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[3].src}" alt="${projectDeets[0].logosAndIcons[3].alt}"/>
+              <img style="width: 25%" src="${projectDeets[3].logosAndIcons[0].src}" alt="${projectDeets[3].logosAndIcons[0].alt}"/>
+              <img style="width: 25%" src="${projectDeets[3].logosAndIcons[1].src}" alt="${projectDeets[3].logosAndIcons[1].alt}"/>
+              <img style="width: 25%" src="${projectDeets[3].logosAndIcons[2].src}" alt="${projectDeets[3].logosAndIcons[2].alt}"/>
+              <img style="width: 25%" src="${projectDeets[3].logosAndIcons[3].src}" alt="${projectDeets[3].logosAndIcons[3].alt}"/>
             </div>
             <div class="moreimages">
               <img src="${projectDeets[3].moreimages[0]}"/>
@@ -230,18 +317,35 @@ const backcountryQuiz = {
 const barsteelCorp = {
 	template: `<div class="projectdetails" style="${projectDeets[4].backgroundColor}">
         <div class="imageAndDeets">
+        <div class="backtowork">
+          <router-link to="/mywork">
+            <img src="./images/close.svg"/>
+          </router-link>
+        </div>
+        <div class="firstimagewrapper">
+        <div class="back">
+          <router-link to="${thumbnails[3].path}">
+            <i class="fas fa-arrow-left"></i>
+          </router-link>
+        </div>
+        <div class="firstlinksandimagewrapper">
           <h2>${projectDeets[4].name}</h2>
+          <div class="livelinks">
             <a href="${projectDeets[4].link}" target="_blank">Live Link</a>
+          </div>
         <div class="firstprojectimage">
           <img src="${projectDeets[4].image}" style="${projectDeets[4].border}"/>
         </div>
+        </div>
+        <div class="next">
+          <router-link to="${thumbnails[5].path}">
+            <i class="fas fa-arrow-right"></i>
+          </router-link>
+        </div>
+        </div>
           <div class="introparagraphwrapper">
             <div class="introwrapperwrapper">
-            <div class="sidebar">
-              ${projectDeets[4].frontEnd}
-              ${projectDeets[4].backEnd}
-            </div>
-            <div class="introparagraph">
+            <div class="introparagraph" style="width: 100%">
               <h2>${projectDeets[4].heading}</h2>
               <pre>${projectDeets[4].intro}</pre>
             </div>
@@ -249,10 +353,10 @@ const barsteelCorp = {
           </div>
           <div class="moreprojectimages">
             <div class="logoAndIcons">
-              <img src="${projectDeets[0].logosAndIcons[0].src}" alt="${projectDeets[0].logosAndIcons[0].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[1].src}" alt="${projectDeets[0].logosAndIcons[1].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[2].src}" alt="${projectDeets[0].logosAndIcons[2].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[3].src}" alt="${projectDeets[0].logosAndIcons[3].alt}"/>
+              <img style="width: 25%" src="${projectDeets[4].logosAndIcons[0].src}" alt="${projectDeets[4].logosAndIcons[0].alt}"/>
+              <img style="width: 25%" src="${projectDeets[4].logosAndIcons[1].src}" alt="${projectDeets[4].logosAndIcons[1].alt}"/>
+              <img style="width: 25%" src="${projectDeets[4].logosAndIcons[2].src}" alt="${projectDeets[4].logosAndIcons[2].alt}"/>
+              <img style="width: 25%" src="${projectDeets[4].logosAndIcons[3].src}" alt="${projectDeets[4].logosAndIcons[3].alt}"/>
             </div>
             <div class="moreimages">
               <img src="${projectDeets[4].moreimages[0]}"/>
@@ -272,33 +376,44 @@ const barsteelCorp = {
 const dalevilleLibrary = {
 	template: `<div class="projectdetails" style="${projectDeets[5].backgroundColor}">
         <div class="imageAndDeets">
+        <div class="backtowork">
+          <router-link to="/mywork">
+            <img src="./images/close.svg"/>
+          </router-link>
+        </div>
+        <div class="firstimagewrapper">
+        <div class="back">
+          <router-link to="${thumbnails[4].path}">
+            <i class="fas fa-arrow-left"></i>
+          </router-link>
+        </div>
+        <div class="firstlinksandimagewrapper">
           <h2>${projectDeets[5].name}</h2>
+          <div class="livelinks">
             <a href="${projectDeets[5].link}" target="_blank">Live Link</a>
+          </div>
         <div class="firstprojectimage">
           <img src="${projectDeets[5].image}" style="${projectDeets[5].border}"/>
         </div>
+        </div>
+        <div class="next">
+          <router-link to="${thumbnails[0].path}">
+            <i class="fas fa-arrow-right"></i>
+          </router-link>
+        </div>
+        </div>
           <div class="introparagraphwrapper">
             <div class="introwrapperwrapper">
-            <div class="sidebar">
-              ${projectDeets[5].frontEnd}
-              ${projectDeets[5].backEnd}
-            </div>
-            <div class="introparagraph">
+            <div class="introparagraph" style="width: 100%">
               <h2>${projectDeets[5].heading}</h2>
               <pre>${projectDeets[5].intro}</pre>
             </div>
             </div>
           </div>
           <div class="moreprojectimages">
-            <div class="logoAndIcons">
-              <img src="${projectDeets[0].logosAndIcons[0].src}" alt="${projectDeets[0].logosAndIcons[0].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[1].src}" alt="${projectDeets[0].logosAndIcons[1].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[2].src}" alt="${projectDeets[0].logosAndIcons[2].alt}"/>
-              <img src="${projectDeets[0].logosAndIcons[3].src}" alt="${projectDeets[0].logosAndIcons[3].alt}"/>
-            </div>
             <div class="moreimages">
-              <img src="${projectDeets[5].moreimages[0]}"/>
-              <img src="${projectDeets[5].moreimages[1]}"/>
+              <img src="${projectDeets[5].moreimages[0]}" style="border: 1px solid LightGray"/>
+              <img src="${projectDeets[5].moreimages[1]}" style="border: 1px solid LightGray"/>
             </div>
             <div class="phonemockups">
               <img src="${projectDeets[5].phoneimages[0]}"/>
@@ -315,7 +430,7 @@ const aboutMe = {
 	template: `<div id="about" class="row">
 		<div class="aboutwrapper">
 			<h1>About me</h1>
-			</p>I am driven by challenge, problem solving, and collaboration. 
+			<p>I am driven by challenge, problem solving, and collaboration. 
 			Which is why I am drawn to a career in web development and web design. 
 			My goal is to be part of a team that contributes to the whole life 
 			cycle of projects from conceptualization to deployment.</p>
@@ -328,7 +443,7 @@ const aboutMe = {
 			themselves and our clients. I also train new and current 
 			employees on our processes in the web department at 
 			Yellow Pages Canada.</p>
-			<p>In my free time you can find outdoors. I love rock climbing, 
+			<p>In my free time you can find me outdoors. I love rock climbing, 
 			hiking, and just spending time outside. One of my favorite things to 
 			do is just to sit and watch nature. If you want to see what I have been 
 			up to recently check out my instagram feed below.</p>
@@ -337,32 +452,52 @@ const aboutMe = {
 	</div>`
 }
 
+function submitForm(event) {
+  event.preventDefault();
+  const form = document.querySelector('form');
+  const formResponse = document.getElementById('js-form-response');
+  const data = {};
+  const formElements = Array.from(form);
+  formElements.map(input => (data[input.name] = input.value));
+  console.log(JSON.stringify(data));
+  var xhr = new XMLHttpRequest();
+  xhr.open(form.method, form.action, true);
+  xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+  xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  xhr.send(JSON.stringify(data));
+  xhr.onloadend = response => {
+      if (response.target.status === 200) {
+        form.reset();
+        formResponse.style.display = "inline-block";
+        formResponse.innerHTML = `Thanks for the message!`;
+      } else {
+        formResponse.style.display = "inline-block";
+        formResponse.innerHTML = `Something went wrong`;
+        console.error(JSON.parse(response.target.response).message);
+      }
+    };
+}
+
 const contact = {
-	template: `<div class="row">
+	template: `<div id="contact" class="row">
 		<div class="contactwrapper">
 			<h1>contact me</h1>
-			<p>I'm pretty easy to get a hold of. If you are interested in working together or have any questions you can send a message through the contact form below or just send me an email at <a href="mailto:catherineannlynn@gmail.com">catherineannlynn@gmail.com</a></p>
-			<form method="post" action="./index.php">
-        
-    <label>Name</label>
-    <input name="name" placeholder="Type Here">
-            
-    <label>Email</label>
-    <input name="email" type="email" placeholder="Type Here">
-            
-    <label>Message</label>
-    <textarea name="message" placeholder="Type Here"></textarea>
-            
-    <input id="submit" name="submit" type="submit" value="Submit">
-        
-</form>
-		</div>
+			<p>I'm pretty easy to get a hold of. If you are interested in working together or have any questions send me an email at <a href="mailto:catherineannlynn@gmail.com">catherineannlynn@gmail.com</a></p>
+      <form action="https://x9goou2wye.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer" onsubmit="submitForm(event)" method="POST">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="reply_to" required></label>
+        <label>Message:<textarea name="message" required></textarea></label>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="js-form-response"></p>
+      </div>
 	</div>`
 }
 
+
 const routes = [
 	{
-		path: './mywork',
+		path: '/mywork',
 		component: projects
 	},
 	{
@@ -390,25 +525,21 @@ const routes = [
 		component: dalevilleLibrary
 	},
 	{
-		path: './about',
+		path: '/about',
 		component: aboutMe
 	},
 	{
-		path: './contact',
+		path: '/contact',
 		component: contact
 	}
 ];
 
 const router = new VueRouter({
-  mode: 'history',
-	routes,
-	scrollBehavior (to, from, savedPosition) {
-		if (savedPosition) {
-			return savedPosition
-		} else {
-			return { x: 0, y: 0 }
-		}
-	}
+	routes
+});
+
+router.afterEach(() => {
+  window.scrollTo(0, 0);
 });
 
 const iconClassAndSize = 'fa-lg icon'
@@ -450,27 +581,38 @@ let app = new Vue({
 			{
 				icon: 'fab fa-instagram ' + iconClassAndSize,
 				link: 'https://www.instagram.com/catherine_annie/',
-			}
+			},
+      {
+        icon: 'fab fa-github ' + iconClassAndSize,
+        link: 'https://github.com/Rigby33'
+      }
 		],
 		skills: [
 			{
 				icon: './images/developer-icon.svg',
 				name: 'developer',
-				deets: 'i get a thrill from bringing ideas to live through code. whatever the challenge is i know i can find a solution through code.'
+				deets: 'I get a thrill from bringing ideas to life through code. Whatever the challenge is I know I can find a solution through code.'
 			},
 			{
 				icon: './images/designer-icon.svg',
 				name: 'designer',
-				deets: 'i have always had an eye for what looks good. making things that look great and are user friendly is important for the overall experience.'
+				deets: 'I have always had an eye for what looks good. Making things that look great and are user friendly is important for the overall experience.'
 			},
 			{
 				icon: './images/problemsolver-icon.svg',
 				name: 'problem solver',
-				deets: 'disovering solutions to problems through trial and error and collabration goes hand-in-hand with design and development. which is why i\'m drawn to both'
+				deets: 'Disovering solutions to problems through trial and error and collabration goes hand-in-hand with design and development. Which is why I\'m drawn to both.'
 			}
 		]
 	}
-}); 
+}).$mount('#app'); 
+
+window.isMobile = function() {
+var check = false;
+(function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+return check; }
+
+if(!isMobile()) {
 
 let followX = 0;
 let followY = 0;
@@ -516,8 +658,10 @@ if(home) {
 	moveBackground();
 	moveLogo();
 }
+}
+
 
 let downArrow = document.getElementsByClassName('downarrow')[0];
 downArrow.onclick = () => {
 	document.getElementById('recentwork').scrollIntoView({behavior: 'smooth', block: 'start'});
-}
+} 
