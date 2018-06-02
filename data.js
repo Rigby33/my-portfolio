@@ -9,7 +9,7 @@ const thumbnails = [
 		name: 'Hiking an Adventure',
 		path: '/mywork/hikinganadventure',
 		image: '../images/hikingadventure-home.jpg',
-		subtitle: 'React + JavaScript + Node.js + HTML + CSS'
+		subtitle: 'React.js + JavaScript + Node.js + HTML + CSS'
 	},
 	{
 		name: 'Pet + Vet',
@@ -51,14 +51,14 @@ const projectDeets = [
 I wanted to create a clean, fresh, fun looking site that reminds people of real smoothies. All of the icons compliment the logo with their clean stroke design.
 
 Users can register to create and save their smoothie recipes. Once users creates a recipe they can edit it or delete it. In addition users can view smoothies created by other members of the smoothie social community.`,
-    frontEnd: `<h3>Front End</h3>
+    frontEnd: `<h3>Frontend</h3>
                 <ul>
                   <li>HTML5</li>
                   <li>CSS3</li>
                   <li>JQuery</li>
                   <li>JavaScript</li>
                 </ul>`,
-    backEnd: `<h3>Back End</h3>
+    backEnd: `<h3>Backend</h3>
                 <ul>
                   <li>Node.js</li>
                   <li>Express.js</li>
@@ -102,14 +102,14 @@ When hiking an adventure loads the user is greeted with the logo, an option to p
 Once a user has clicked either hike as guest or logged in they move to the game screen. The game screen has a hiker game piece that starts at the bottom of the screen at the start of the trail. The goal is to stay on the trail pieces. Every time the hiker moves off of the trail one point is deducted from their current score. Along the way there will be pieces of trash and bears. For every piece of trash the hiker picks up 10 points will be added to the current score. If a hiker hikes over a bear spot a question will pop up. A correct answers adds 100 points to the score while an incorrect answer deducts 100 points. The trail is random and changes every time the hiker gets to the last place on the trail.
 
 If a user is logged in a button between their current score and high score will be seen. The user can click save score at anytime to save their high score and be added to the thru hiker leader board.`,
-    frontEnd: `<h3>Front End</h3>
+    frontEnd: `<h3>Frontend</h3>
                 <ul>
-                  <li>React</li>
+                  <li>React.js</li>
                   <li>JavaScript</li>
                   <li>HTML5</li>
                   <li>CSS3</li>
                 </ul>`,
-    backEnd: `<h3>Back End</h3>
+    backEnd: `<h3>Backend</h3>
                 <ul>
                   <li>Node.js</li>
                   <li>Express.js</li>
@@ -148,7 +148,7 @@ If a user is logged in a button between their current score and high score will 
     intro: `Pet Plus Vet is a tool where a user can search for adoptable pets and vets in their area. There's a saying that goes "if you can't afford the vet don't adopt the pet." The goal of this website is to drive home the importance of animal health care when adding a new member (pet) to your family.
 
 This website was made possible by using data pulled from two third party APIs. <a href="http://petfinder.com" target="_blank">http://petfinder.com</a> and <a href="http://maps.google.com" target="_blank">http://maps.google.com</a> (Google Maps Javascript API)`,
-    frontEnd: `<h3>Front End</h3>
+    frontEnd: `<h3>Frontend</h3>
                 <ul>
                   <li>JQuery</li>
                   <li>JavaScript</li>
@@ -195,7 +195,7 @@ This website was made possible by using data pulled from two third party APIs. <
     intro: `This was one of my first projects that I created with with JavaScript and JQuery. It's a single page app that tests the user's knowledge of backpacking and the backcountry.
 
 A user is greated with the opening screen prompting them to start the quiz. As the move through the questions the user recieves instant feedback on score and number of question they are on. At the end of the quiz the user recieves their final score.`,
-    frontEnd: `<h3>Front End</h3>
+    frontEnd: `<h3>Frontend</h3>
                 <ul>
                   <li>JQuery</li>
                   <li>JavaScript</li>
@@ -234,7 +234,7 @@ A user is greated with the opening screen prompting them to start the quiz. As t
 
 The client's previous website was very simple. The majority of the content was just text. I found in my research that most steel websites are dificult to navigate and not visually appealing.
 
-I wanted to create website that was informational, user friendly, and attrative to the user. I also created all of the icons found throughout the website.`,
+I wanted to create website that was informational, user-friendly, and attrative to the user. I also created all of the icons found throughout the website.`,
     logosAndIcons: [
       {
         alt: 'smoothie social logo',

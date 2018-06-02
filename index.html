@@ -53,7 +53,7 @@
 				<div class="herosection">
 					<div class="herocontainer">
 						<img src="./images/logo.svg" class="herologo"/>
-						<h1><span>web designer</span> + <span>developer</span> fueled by <span>challenge, problem solving</span> + <span>collaboration</span></h1>
+						<h1><span>web designer</span> + <span>developer</span> fueled by <span>challenge, problem-solving</span> + <span>collaboration</span></h1>
 					</div>
 				</div>
 			</div>
@@ -65,10 +65,9 @@
 			<div class="recentworkwrapper">
 				<div class="recentworkintro">
 					<div>
-						<h2>recent work</h2>
+						<h2>featured work</h2>
 						<p>Check out what I've built lately below. Interested in seeing other examples? Click view more to see more.</p>
 					</div>
-					<router-link class="viewmore" to="/mywork">view more</router-link>
 				</div>
 				<div class="recentworkimageswrapper">
 				<router-link class="recentworkimages projecthover" v-for="recentWork in recentWorks" :key="recentWork.id" :style="{ backgroundImage: 'url(' + recentWork.image + ')' }" :to="recentWork.path">
@@ -78,6 +77,7 @@
 					</div>
 				</router-link>
 			</div>
+			<router-link class="viewmore" to="/mywork">view more</router-link>
 			</div>
 		</div>
 		<div id="skills" class="row" :class="{internalPage : ['/mywork', '/mywork/smoothiesocial', '/mywork/hikinganadventure', '/mywork/petplusvet', '/mywork/backcountryquiz', '/mywork/barsteel', '/mywork/daleville', '/about', '/contact'].indexOf($route.path) > -1}">
@@ -96,6 +96,14 @@
 			</div>
 		</div>
 		<footer>
+				<div class="footername">Catherine Lynn - 2018</div>
+				<div class="socialmedia">
+				<div id="footersocial">
+					<a v-for="icon in icons" target="_blank" v-bind:href="icon.link">
+						<i v-bind:class="icon.icon"></i>
+					</a>
+				</div>
+				</div>
 		</footer>
 	</div>
 	<script type="text/javascript" src="data.js"></script>

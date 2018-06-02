@@ -430,23 +430,23 @@ const aboutMe = {
 	template: `<div id="about" class="row">
 		<div class="aboutwrapper">
 			<h1>About me</h1>
-			<p>I am driven by challenge, problem solving, and collaboration. 
+			<p>I am driven by challenge, problem-solving, and collaboration. 
 			Which is why I am drawn to a career in web development and web design. 
 			My goal is to be part of a team that contributes to the whole life 
 			cycle of projects from conceptualization to deployment.</p>
 			<p>While working at Yellow Pages Canada I have made it my 
 			mission to always be willing and able to take on any task. 
 			This has taken me to my current position as senior web designer. 
-			As senior web designer I collaborate with colleges on best design 
-			practices to improve quality and productivity. Additionally I 
+			As a senior web designer I collaborate with colleagues on best design 
+			practices to improve quality and productivity. Additionally, I 
 			design websites used internally and by sales to educate 
 			themselves and our clients. I also train new and current 
 			employees on our processes in the web department at 
 			Yellow Pages Canada.</p>
-			<p>In my free time you can find me outdoors. I love rock climbing, 
+			<p>In my free time, you can find me outdoors. I love rock climbing, 
 			hiking, and just spending time outside. One of my favorite things to 
 			do is just to sit and watch nature. If you want to see what I have been 
-			up to recently check out my instagram feed below.</p>
+			up to recently, check out my Instagram feed below.</p>
 			<iframe src="//lightwidget.com/widgets/c7c22a78bfaa5896b49dca025521a739.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 		</div>
 	</div>`
@@ -459,7 +459,6 @@ function submitForm(event) {
   const data = {};
   const formElements = Array.from(form);
   formElements.map(input => (data[input.name] = input.value));
-  console.log(JSON.stringify(data));
   var xhr = new XMLHttpRequest();
   xhr.open(form.method, form.action, true);
   xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
@@ -570,6 +569,10 @@ let app = new Vue({
 			}
 		],
 		icons: [
+      {
+        icon: 'fab fa-dribbble ' + iconClassAndSize,
+        link: 'https://dribbble.com/CatherineLynn',
+      },
 			{
 				icon: 'fab fa-linkedin-in ' + iconClassAndSize,
 				link: 'http://www.linkedin.com/in/CatherineAnnLynn',
@@ -596,12 +599,12 @@ let app = new Vue({
 			{
 				icon: './images/designer-icon.svg',
 				name: 'designer',
-				deets: 'I have always had an eye for what looks good. Making things that look great and are user friendly is important for the overall experience.'
+				deets: 'I have always had an eye for what looks good. Making things that look great and are user-friendly is important for the overall experience.'
 			},
 			{
 				icon: './images/problemsolver-icon.svg',
 				name: 'problem solver',
-				deets: 'Disovering solutions to problems through trial and error and collabration goes hand-in-hand with design and development. Which is why I\'m drawn to both.'
+				deets: 'Discovering solutions to problems through trial and error and collaboration goes hand-in-hand with design and development, which is why I\'m drawn to both.'
 			}
 		]
 	}

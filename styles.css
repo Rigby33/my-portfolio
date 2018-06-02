@@ -11,6 +11,32 @@ body {
   background-color: rgb(61, 59, 48);
   color: rgb(61, 59, 48);
 }
+footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: all .5s ease-in-out;
+  padding: 20px 50px;
+  background-color: rgb(61, 59, 48);
+  justify-content: space-around;
+  color: white;
+}
+footer div {
+  width: 60%
+}
+#footersocial {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 0 auto;
+  opacity: 1;
+}
+#footersocial a {
+  margin-right: 30px
+}
+#footersocial a:last-child {
+  margin-right: 0px
+}
 h1 {
   text-transform: uppercase;
   line-height: 1.2em
@@ -113,9 +139,10 @@ nav .router-link-active::after {
 }
 .icon {
   color: white;
+  transition: all 0.5s ease-in-out;
 }
 .icon:hover {
-  color: #FFF37F;
+  color: rgb(170, 196, 23);
 }
 #socialicons a {
   margin-right: 30px
@@ -192,7 +219,7 @@ header div:nth-of-type(1) {
   width: 100%;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   align-items: center
 }
 .recentworkwrapper h2 {
@@ -225,6 +252,7 @@ header div:nth-of-type(1) {
 .recentworkimageswrapper {
   width: 100%;
   display: flex;
+  margin-bottom: 40px;
   justify-content: space-between;
 }
 .internalPage {
@@ -276,11 +304,11 @@ header div:nth-of-type(1) {
   width: 100%;
   color: white;
   text-align: center;
-  margin-bottom: 20px
+  margin-bottom: 40px
 }
 .skillwrapper {
   display: flex;
-  margin-bottom: 20px
+  margin-bottom: 40px
 }
 .skill {
   width: 30%;
@@ -311,8 +339,8 @@ header div:nth-of-type(1) {
 	background-color: #EFEFEF
 }
 #mywork {
-  height: 100vh
-}
+/*  height: 100vh
+*/}
 .projects {
 	display: flex;
 	width: 100%;
@@ -672,6 +700,7 @@ form input, form textarea {
   font-size: 1em;
   padding: 10px;
   border-bottom: 2px solid white;
+  font-family: 'Montserrat', sans-serif
 }
 
 form input:focus, form textarea:focus {
@@ -700,26 +729,11 @@ form input:focus, form textarea:focus {
 
 @media only screen and (max-width: 1199px) {
   header {
-    padding: 10px 10px;
-    background-color: rgb(61, 59, 48)
-  }
-  nav ul li {
-    font-size: .75em
-  }
-  .project {
-    width: 40%
-  }
-  form button {
-    width: 40%
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  header {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    background-color: rgb(61, 59, 48)!important
+/*    background-color: rgb(58, 59, 48)!important
+*/    background-color: rgb(58, 59, 48)!important
   }
   header div, nav {
     width: 100%;
@@ -738,6 +752,60 @@ form input:focus, form textarea:focus {
     margin-right: 0
   }
   #socialicons {
+    padding-top: 10px;
+    justify-content: center;
+  }
+  header div:nth-of-type(1) {
+    display: none
+  }
+  .headerlogo {
+    width: 30%
+  }
+  .headerlogocontainer {
+    display: inline-block!important;
+  }
+  /*header {
+    padding: 10px 10px;
+    background-color: rgb(61, 59, 48)
+  }
+  nav ul li {
+    font-size: .7em
+  }*/
+  .project {
+    width: 40%
+  }
+  form button {
+    width: 40%
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header, footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(61, 59, 48)!important
+  }
+  .footername {
+    text-align: center
+  }
+  header div, nav, footer div {
+    width: 100%;
+    margin: 0 auto;
+  }
+  nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  nav ul li {
+    text-align: center;
+    font-size: .8em
+  }
+  nav ul li:last-of-type {
+    margin-right: 0
+  }
+  #socialicons, #footersocial {
     padding-top: 10px;
     justify-content: center;
   }
