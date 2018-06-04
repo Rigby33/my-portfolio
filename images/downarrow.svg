@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="200px" height="136px" viewBox="0 0 200 136" style="enable-background:new 0 0 200 136;" xml:space="preserve">
+	 width="324px" height="100px" viewBox="0 0 324 100" style="enable-background:new 0 0 324 100;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#FFFFFF;stroke-width:2.7237;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st0{fill:#FFF37F;}
+	.st1{fill:#AAC417;}
+	.st2{enable-background:new    ;}
+	.st3{clip-path:url(#SVGID_2_);fill:none;stroke:#FFFFFF;stroke-width:9.5923;stroke-linecap:round;stroke-miterlimit:10;}
 </style>
-<polyline class="st0" points="10.3,13 100,123 189.7,13 "/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="0.5" y="0.4" width="322.9" height="99.1"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<path class="st3" d="M317.1,6.8L166.7,91.3c-2.9,1.6-6.5,1.6-9.4,0L6.9,6.8"/>
+</g>
 </svg>

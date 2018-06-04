@@ -1,4 +1,5 @@
 let projects = {template: `<div class="row" id="mywork">
+<div class="projectwrapper">
 					<div class="projects">
 						<div class="project">
 							<router-link class="projecthover" to="${thumbnails[0].path}" style="background-image: url(${thumbnails[0].image})">
@@ -49,6 +50,7 @@ let projects = {template: `<div class="row" id="mywork">
 							</router-link>
 						</div>
 					</div>
+          </div>
 				</div>`};
 
 const smoothiesocial = {
@@ -483,9 +485,11 @@ const contact = {
 			<h1>contact me</h1>
 			<p>I'm pretty easy to get a hold of. If you are interested in working together or have any questions send me an email at <a href="mailto:catherineannlynn@gmail.com">catherineannlynn@gmail.com</a></p>
       <form action="https://x9goou2wye.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer" onsubmit="submitForm(event)" method="POST">
+        <div class="inputwrapper">
         <label>Name<input type="text" name="name" required></label>
         <label>Email<input type="email" name="reply_to" required></label>
         <label>Message:<textarea name="message" required></textarea></label>
+        </div>
         <button type="submit">Send Message</button>
       </form>
       <p id="js-form-response"></p>
@@ -493,8 +497,102 @@ const contact = {
 	</div>`
 }
 
+let skills = [
+      {
+        // icon: './images/developer-icon.svg',
+        name: 'developer',
+        deets: 'I get a thrill from bringing ideas to life through code. Whatever the challenge is I know I can find a solution through code.'
+      },
+      {
+        // icon: './images/designer-icon.svg',
+        name: 'designer',
+        deets: 'I have always had an eye for what looks good. Making things that look great and are user-friendly is important for the overall experience.'
+      },
+      {
+        // icon: './images/problemsolver-icon.svg',
+        name: 'problem solver',
+        deets: 'Discovering solutions to problems through trial and error and collaboration goes hand-in-hand with design and development, which is why I\'m drawn to both.'
+      }
+    ]
+
+const home = {
+  template: `<div>
+  <div id="home">
+      <div class="homewrapper">
+        <div class="herosection">
+          <div class="herocontainer">
+            <img src="./images/white-logo.svg" class="herologo"/>
+            <h1><span>web designer</span> + <span>developer</span> fueled by <span>challenge, problem&#8209;solving</span> +&nbsp;<span>collaboration</span></h1>
+          </div>
+        </div>
+      </div>
+      <div class="downarrow" onclick="scrollDown()">
+        <img src="./images/downarrow.svg" class="downarrowimage"/>
+      </div>
+    </div>
+    <div id="recentwork" class="row">
+      <div class="recentworkwrapper">
+        <div class="recentworkintro">
+          <div>
+            <h2>featured work</h2>
+            <p>Check out what I've built lately below. Interested in seeing other examples? Click view more to see more.</p>
+          </div>
+        </div>
+        <div class="recentworkimageswrapper">
+        <router-link class="recentworkimages projecthover" style="background-image: url(${thumbnails[1].image})" to="${thumbnails[1].path}">
+          <div class="projectinfo">
+            <div class="projectname">${thumbnails[1].name}</div>
+            <div class="projectsub">${thumbnails[1].subtitle}</div>
+          </div>
+        </router-link>
+        <router-link class="recentworkimages projecthover" style="background-image: url(${thumbnails[0].image})" to="${thumbnails[1].path}">
+          <div class="projectinfo">
+            <div class="projectname">${thumbnails[0].name}</div>
+            <div class="projectsub">${thumbnails[0].subtitle}</div>
+          </div>
+        </router-link>
+        <router-link class="recentworkimages projecthover" style="background-image: url(${thumbnails[2].image})" to="${thumbnails[1].path}">
+          <div class="projectinfo">
+            <div class="projectname">${thumbnails[2].name}</div>
+            <div class="projectsub">${thumbnails[2].subtitle}</div>
+          </div>
+        </router-link>
+      </div>
+      <router-link class="viewmore" to="/mywork">view more</router-link>
+      </div>
+    </div>
+    <div id="skills" class="row">
+      <div class="skillswrapper">
+        <div>
+          <h2>catherine lynn is a</h2>
+        </div>
+        <div class="skillwrapper">
+          <div class="skill">
+            <h3>${skills[0].name}</h3>
+            <p>${skills[0].deets}</p>
+          </div>
+          <div class="skill">
+            <h3>${skills[1].name}</h3>
+            <p>${skills[1].deets}</p>
+          </div>
+          <div class="skill">
+            <h3>${skills[2].name}</h3>
+            <p>${skills[2].deets}</p>
+          </div>
+        </div>
+          <router-link class="viewmore" to="/about">learn more</router-link>
+      </div>
+    </div>
+    </div>`
+}
+
 
 const routes = [
+  {
+    path: '/',
+    component: home,
+
+  },
 	{
 		path: '/mywork',
 		component: projects
@@ -581,10 +679,6 @@ let app = new Vue({
 				icon: 'fab fa-twitter ' + iconClassAndSize,
 				link: 'https://twitter.com/CatherineALynn',
 			},
-			{
-				icon: 'fab fa-instagram ' + iconClassAndSize,
-				link: 'https://www.instagram.com/catherine_annie/',
-			},
       {
         icon: 'fab fa-github ' + iconClassAndSize,
         link: 'https://github.com/Rigby33'
@@ -592,79 +686,133 @@ let app = new Vue({
 		],
 		skills: [
 			{
-				icon: './images/developer-icon.svg',
+				// icon: './images/developer-icon.svg',
 				name: 'developer',
 				deets: 'I get a thrill from bringing ideas to life through code. Whatever the challenge is I know I can find a solution through code.'
 			},
 			{
-				icon: './images/designer-icon.svg',
+				// icon: './images/designer-icon.svg',
 				name: 'designer',
 				deets: 'I have always had an eye for what looks good. Making things that look great and are user-friendly is important for the overall experience.'
 			},
 			{
-				icon: './images/problemsolver-icon.svg',
+				// icon: './images/problemsolver-icon.svg',
 				name: 'problem solver',
 				deets: 'Discovering solutions to problems through trial and error and collaboration goes hand-in-hand with design and development, which is why I\'m drawn to both.'
 			}
-		]
+		],
+    projects: [
+      {
+        name: 'Hiking an Adventure',
+        path: '/mywork/hikinganadventure',
+        image: '../images/hikingadventure-home.jpg',
+        subtitle: 'React.js + JavaScript + Node.js + HTML + CSS'
+      },
+      {
+        name: 'SmoothieSocial',
+        path: '/mywork/smoothiesocial',
+        image: '../images/smoothiesocial-home.jpg',
+        subtitle: 'Node.js + JavaScript + JQuery + HTML + CSS'
+      },
+      {
+        name: 'Pet + Vet',
+        path: '/mywork/petplusvet',
+        image: '../images/petvet-home.jpg',
+        subtitle: 'JavaScript + JQuery + HTML + CSS'
+      },
+      {
+        name: 'Backcountry Quiz',
+        path: '/mywork/backcountryquiz',
+        image: '../images/backcountryquiz-home.jpg',
+        subtitle: 'JavaScript + JQuery + HTML + CSS'
+      },
+      {
+        name: 'Barsteel',
+        path: '/mywork/barsteel',
+        image: '../images/barsteel-home.jpg',
+        subtitle: 'Webflow'
+      },
+      {
+        name: 'Daleville Community Library',
+        path: '/mywork/daleville',
+        image: '../images/daleville-home.jpg',
+        subtitle: 'Wordpress'
+      }
+    ]
 	}
 }).$mount('#app'); 
 
-window.isMobile = function() {
-var check = false;
-(function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
-return check; }
+// window.isMobile = function() {
+// var check = false;
+// (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+// return check; }
 
-if(!isMobile()) {
+// if(!isMobile()) {
 
-let followX = 0;
-let followY = 0;
-let x = 0;
-let y = 0;
-let friction = 1/50;
+// let followX = 0;
+// let followY = 0;
+// let x = 0;
+// let y = 0;
+// let friction = 1/50;
 
-const home = document.getElementById('home');
+// const home = document.getElementById('home');
 
-function moveBackground() {
-	x += (followX - x) * friction;
-	y += (followY - y) * friction;
+// function moveBackground() {
+// 	x += (followX - x) * friction;
+// 	y += (followY - y) * friction;
 
-	translate = `translate(${x}px, ${y}px) scale(1.1)`;
-	if(home) {
-		let background = document.getElementsByClassName('homewrapper')[0];
-		background.setAttribute('style', `transform: ${translate}`);
-	}
+// 	translate = `translate(${x}px, ${y}px) scale(1.1)`;
+// 	if(home) {
+// 		let background = document.getElementsByClassName('homewrapper')[0];
+// 		background.setAttribute('style', `transform: ${translate}`);
+// 	}
 
-	window.requestAnimationFrame(moveBackground);
-}
-if(home) {
-	home.addEventListener('mousemove', (e) => {
-		let mouseX = Math.max(-100, Math.min(100, window.innerWidth/2 - e.clientX));
-		let mouseY = Math.max(-100, Math.min(100, window.innerHeight/2 - e.clientY));
-		followX = (20 * mouseX)/100;
-		followY = (20 * mouseY)/100;
-	});
-}
+// 	window.requestAnimationFrame(moveBackground);
+// }
+// if(home) {
+// 	home.addEventListener('mousemove', (e) => {
+// 		let mouseX = Math.max(-100, Math.min(100, window.innerWidth/2 - e.clientX));
+// 		let mouseY = Math.max(-100, Math.min(100, window.innerHeight/2 - e.clientY));
+// 		followX = (20 * mouseX)/100;
+// 		followY = (20 * mouseY)/100;
+// 	});
+// }
 
-function moveLogo() {
-	x += (followX - x) * friction;
-	y += (followY - y) * friction;
+// function moveLogo() {
+// 	x += (followX - x) * friction;
+// 	y += (followY - y) * friction;
 
-	translate = `translate(${x}px, ${y}px)`;
+// 	translate = `translate(${x}px, ${y}px)`;
 
-	let background = document.getElementsByClassName('herologo')[0];
-	background.setAttribute('style', `transform: ${translate}`);
+// 	let background = document.getElementsByClassName('herologo')[0];
+// 	background.setAttribute('style', `transform: ${translate}`);
 
-	window.requestAnimationFrame(moveLogo);
-}
-if(home) {
-	moveBackground();
-	moveLogo();
-}
-}
+// 	window.requestAnimationFrame(moveLogo);
+// }
+// if(home) {
+// 	moveBackground();
+// 	moveLogo();
+// }
+// }
 
 
-let downArrow = document.getElementsByClassName('downarrow')[0];
-downArrow.onclick = () => {
+function scrollDown() {
 	document.getElementById('recentwork').scrollIntoView({behavior: 'smooth', block: 'start'});
-} 
+}
+
+// document.getElementById('myworklink').onclick = () => {
+//   document.getElementById('mywork').scrollIntoView({behavior: 'smooth', block: 'start'});
+// }
+
+let lastScrollTop = 0;   
+
+window.addEventListener('scroll', () => {
+  const header = document.getElementsByTagName('header')[0];
+  let st = window.pageYOffset || document.documentElement.scrollTop;
+  if(st > lastScrollTop) {
+    header.style.top = '-100%';
+  } else {
+    header.style.top = '0';
+  }
+  lastScrollTop = st;
+}, false);

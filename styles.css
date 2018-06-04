@@ -5,11 +5,11 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 300;
   line-height: 1.6em;
-  background-color: rgb(61, 59, 48);
-  color: rgb(61, 59, 48);
+  background-color: rgb(85, 72, 69);
+  color: rgb(85, 72, 69);
 }
 footer {
   display: flex;
@@ -17,7 +17,6 @@ footer {
   width: 100%;
   transition: all .5s ease-in-out;
   padding: 20px 50px;
-  background-color: rgb(61, 59, 48);
   justify-content: space-around;
   color: white;
 }
@@ -42,8 +41,8 @@ h1 {
   line-height: 1.2em
 }
 h2 {
-  font-size: 1.75em;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 1.2em
 }
@@ -52,7 +51,7 @@ h3 {
   text-transform: uppercase;
 }
 a {
-  color: rgb(170, 196, 23);
+  color: rgb(244, 123, 95);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -62,14 +61,14 @@ header {
 	position: fixed;
 	width: 100%;
 	transition: all .5s ease-in-out;
-  padding: 10px 50px;
+  padding: 40px 40px;
 	z-index: 3;
-	background-color: rgb(61, 59, 48);
   justify-content: space-around;
+  background-color: rgb(245, 133, 105)
 }
 
 header div, nav {
-	width: 30%
+	width: 50%
 }
 nav {
 	opacity: 1
@@ -88,10 +87,10 @@ nav a {
 	position: relative;
 }
 nav a:hover {
-	color: rgb(170, 196, 23)
+	color: rgb(85, 72, 69)
 }
 nav a:after {
-	border-bottom: 3px solid rgb(170, 196, 23);
+	border-bottom: 3px solid rgb(251, 178, 152);
 	content: '';
 	left: 0;
 	margin-top: -.125em;
@@ -102,7 +101,7 @@ nav a:after {
 	opacity: 0;
 }
 nav a:hover:after {
-	border-bottom: 3px solid rgb(170, 196, 23);
+	border-bottom: 3px solid rgb(251, 178, 152);
 	content: '';
 	opacity: 1;
 	left: 0;
@@ -111,17 +110,17 @@ nav a:hover:after {
 	right: 0;
 	top: 50%;
 }
-nav .router-link-active {		
+nav .router-link-exact-active {		
 	color: white;
 }
 
-nav .router-link-active > span {
+nav .router-link-exact-active > span {
 	font-size: 1em!important;
 	color: white;
 }
 
-nav .router-link-active::after {
-	border-bottom: 3px solid rgb(170, 196, 23);
+nav .router-link-exact-active::after {
+	border-bottom: 3px solid rgb(85, 72, 69);
 	content: '';
 	left: 0;
 	margin-top: -.125em;
@@ -142,7 +141,7 @@ nav .router-link-active::after {
   transition: all 0.5s ease-in-out;
 }
 .icon:hover {
-  color: rgb(170, 196, 23);
+  color: rgb(251, 178, 152);
 }
 #socialicons a {
   margin-right: 30px
@@ -150,11 +149,11 @@ nav .router-link-active::after {
 #socialicons a:last-child {
   margin-right: 0px
 }
-header div:nth-of-type(1) {
+/*header div:nth-of-type(1) {
 	opacity: 0;
 	transition: all .5s ease-in-out;
 	text-align: center;
-}
+}*/
 .headerlogocontainer {
 	display: inline-block;
 	opacity: 1!important;
@@ -171,21 +170,21 @@ header div:nth-of-type(1) {
   opacity: 1;
   display: block;
 	width: 100%;
-	background-color: rgb(170, 196, 23);
+	background-color: rgb(244, 123, 95);
 }
 .homewrapper {
-	background: radial-gradient(ellipse at center, #7c7862 0%,#302F26 99%);
+	background: linear-gradient(rgb(245, 133, 105) 20%, rgb(251, 178, 152));
 	height: 100vh;
 	width: 100%;
 	padding-top: 300px;
 	overflow: hidden;
 }
 .herosection {
-	width: 50%;
+	width: 60%;
 	margin: 0 auto;
 }
 .herocontainer {
-	width: 50%;
+	width: 60%;
 	position: absolute;
 	margin: 0 auto;
 }
@@ -199,19 +198,18 @@ header div:nth-of-type(1) {
 #home h1 {
 	color: white;
 	text-transform: uppercase;
-	font-size: 1.5em;
+	font-size: 1.75em;
 	line-height: 1.5em;
 	font-weight: 300;
-	margin-left: 50px
 }
 #home h1 span {
-	font-weight: 700
+	font-weight: 600
 }
 .recentworkwrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
 }
 .recentworkintro {
@@ -220,32 +218,33 @@ header div:nth-of-type(1) {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 20px;
-  align-items: center
 }
 .recentworkwrapper h2 {
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
+  color: rgb(244, 123, 95);
 }
 .recentworkwrapper p {
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
 }
 .viewmore {
   display: inline-block;
   padding: 15px 20px;
-  background-color: rgb(170, 196, 23);
+  opacity: 1;
+  background: linear-gradient(45deg, rgb(251, 178, 152), rgb(245, 133, 105));
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  margin: 0 auto;
+  border-radius: 3px;
   transition: all .5s ease-in-out;
 }
 .viewmore:hover {
-  background-color: #92A814;
+  opacity: .7
 }
 .recentworkimages {
   height: 240px!important;
   width: 32%!important;
+  border-radius: 3px;
   background-position: center center;
   background-size: cover
 }
@@ -255,7 +254,7 @@ header div:nth-of-type(1) {
   margin-bottom: 40px;
   justify-content: space-between;
 }
-.internalPage {
+/*.internalPage {
 	height: auto!important;
   display: none!important;
   opacity: 0!important
@@ -274,7 +273,7 @@ header div:nth-of-type(1) {
   height: auto!important;
   display: none!important;
   opacity: 0!important
-}
+}*/
 .downarrow {
   position: absolute;
   color: white;
@@ -292,39 +291,36 @@ header div:nth-of-type(1) {
   margin: 0 auto
 }
 #skills {
-  background: #7c7862;
+  background-color: rgb(251, 178, 152);
+  color: rgb(85, 72, 69);
 }
 .skillswrapper {
   display: flex;
-  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 65%;
   margin: 0 auto;
-  flex-direction: column;
 }
 .skillswrapper > div:nth-child(1) {
   width: 100%;
-  color: white;
-  text-align: center;
   margin-bottom: 40px
 }
 .skillwrapper {
   display: flex;
-  margin-bottom: 40px
+  margin-bottom: 40px;
+  justify-content: space-between;
 }
 .skill {
-  width: 30%;
-  margin: 0 auto;
-  text-align: center;
+  width: 32%;
   display: flex;
   flex-direction: column;
 
 }
 .skill h3 {
-  color: white;
   font-weight: 400;
   margin-bottom: 20px;
 }
 .skill p {
-  color: white;
   font-weight: 300
 }
 .fade-enter-active, .fade-leave-active {
@@ -335,25 +331,33 @@ header div:nth-of-type(1) {
 }
 .row {
 	margin: 0 auto;
-	padding: 125px 30px 125px;
-	background-color: #EFEFEF
+	padding: 150px 0 150px;
+	background-color: #ffffff
 }
 #mywork {
 /*  height: 100vh
 */}
+.title {
+  color: rgb(244, 123, 95);
+  margin-bottom: 40px
+}
+.projectwrapper {
+  width: 65%;
+  margin: 50px auto 0;
+}
 .projects {
 	display: flex;
 	width: 100%;
 	margin: 0 auto;
 	position: relative;
 	flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 .project {
-  height: 300px;
-  width: 30%;
+  height: 240px;
+  width: 32%;
   position: relative;
-  margin: 20px;
+  margin-bottom: 20px
 }
 .projecthover {
 	z-index: 1;
@@ -364,26 +368,27 @@ header div:nth-of-type(1) {
 	background-size: cover;
 	overflow: hidden;
 	position: relative;
-	text-decoration: none
+	text-decoration: none;
+  border-radius: 3px;
 }
 .projectinfo {
 	position: relative;
-    visibility: hidden;
-    transition: all 0.5s ease-in-out;
-    opacity: 0;
-    bottom: 100%;
-    visibility: hidden;
-    width: 100%;
-    z-index: 2;
-    color: white;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    margin: 0 auto
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  bottom: 100%;
+  visibility: hidden;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto
 }
 .projecthover:hover > .projectinfo {
 	bottom: 0%;
@@ -576,7 +581,7 @@ pre {
 
 .sidebar ul li {
   list-style: none;
-  color: rgb(170, 196, 23);
+  color: rgb(244, 123, 95);
 }
 
 .sidebar ul {
@@ -642,9 +647,12 @@ pre {
 .moreimages > img:nth-child(3), .moreimages > img:nth-child(4) {
   width: 49%;
 }
+#about {
+  background-color: rgb(250, 178, 152);
+}
 .aboutwrapper, .contactwrapper {
-  margin: 40px auto;
-  width: 70%
+  margin: 50px auto 0;
+  width: 65%
 }
 
 .aboutwrapper > h1, .contactwrapper > h1 {
@@ -658,27 +666,40 @@ pre {
 .aboutwrapper > p:last-of-type {
   margin-bottom: 40px
 }
+#contact {
+  background-color: rgb(251, 178, 152);
+  color: rgb(85, 72, 69);
+}
+.contactwrapper a {
+  font-weight: 600
+}
 form {
   display: flex;
-  flex-direction: column;
+/*  flex-direction: column;*/
   margin-top: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.inputwrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%
 }
 form label {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  color: rgb(124, 120, 98);
-  font-size: .8em;
+  color: white;
   font-family: 'Montserrat', sans-serif
 }
 form button {
   display: inline-block;
   padding: 15px 20px;
-  background-color: rgb(170, 196, 23);
+  opacity: 1;
+  background: linear-gradient(45deg, rgb(251, 178, 152), rgb(245, 133, 105));
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  width: 25%;
+  border-radius: 3px;
   transition: all .5s ease-in-out;
   font-size: 1em;
   text-transform: uppercase;
@@ -689,23 +710,24 @@ form button {
   font-family: 'Montserrat', sans-serif
 }
 form button:hover {
-  background-color: #92A814;
+  opacity: .7
 }
 form input, form textarea {
   border: none;
   margin-bottom: 10px;
   margin-top: 10px;
   color: rgb(61, 59, 48);
-  background-color: white;
+  background-color: rgba(255, 255, 255, .8);
   font-size: 1em;
   padding: 10px;
-  border-bottom: 2px solid white;
+  border-radius: 3px;
+  border: 2px solid rgba(255, 255, 255, 0);
   font-family: 'Montserrat', sans-serif
 }
 
 form input:focus, form textarea:focus {
   outline: none;
-  border-bottom: 2px solid rgb(170, 196, 23);
+  border: 2px solid rgb(244, 123, 95);
 }
 #js-form-response {
   background-color: rgb(212, 226, 116);
@@ -732,8 +754,8 @@ form input:focus, form textarea:focus {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    background-color: rgb(61, 59, 48)!important
-  }
+/*    background-color: rgb(61, 59, 48)!important
+*/  }
   header div, nav {
     width: 100%;
     margin: 0 auto;
@@ -754,9 +776,9 @@ form input:focus, form textarea:focus {
     padding-top: 10px;
     justify-content: center;
   }
-  header div:nth-of-type(1) {
+/*  header div:nth-of-type(1) {
     display: none
-  }
+  }*/
   .headerlogo {
     width: 30%
   }
@@ -783,7 +805,7 @@ form input:focus, form textarea:focus {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    background-color: rgb(61, 59, 48)!important
+    /*background-color: rgb(61, 59, 48)!important*/
   }
   .footername {
     text-align: center
@@ -808,9 +830,9 @@ form input:focus, form textarea:focus {
     padding-top: 10px;
     justify-content: center;
   }
-  header div:nth-of-type(1) {
+/*  header div:nth-of-type(1) {
     display: none
-  }
+  }*/
   .headerlogo {
     width: 30%
   }
@@ -856,6 +878,9 @@ form input:focus, form textarea:focus {
   .row {
     padding: 70px 20px;
   }
+  .recentworkwrapper {
+    width: 90%
+  }
   .recentworkimages {
     width: 100%!important;
     margin-bottom: 20px
@@ -865,8 +890,11 @@ form input:focus, form textarea:focus {
     justify-content: center;
     margin: 0 auto;
   }
+  .skillswrapper {
+    width: 90%
+  }
   .skillwrapper {
-    flex-wrap: wrap
+    flex-wrap: wrap;
   }
   .skill {
     width: 100%;
@@ -881,6 +909,10 @@ form input:focus, form textarea:focus {
   }
   #mywork {
     height: auto;
+  }
+  .projectwrapper {
+    width: 90%;
+    margin-top: 0
   }
   .projectdetails {
     padding-top: 50px;
@@ -943,13 +975,12 @@ form input:focus, form textarea:focus {
     width: 10%
   }
   .aboutwrapper, .contactwrapper {
-    width: 100%;
-    padding-right: 20px;
-    padding-left: 20px;
+    margin-top: 0;
+    width: 90%;
   }
-  form button {
+/*  form button {
     width: 50%
-  }
+  }*/
   .contactwrapper a {
     text-transform: lowercase;
   }
